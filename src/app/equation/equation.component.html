@@ -1,0 +1,16 @@
+<h1>Math form</h1>scorll = {{ scroll}}
+<hr>
+<div>
+  <form [formGroup]="mathForm">
+    {{ mathForm.value.a }} + {{ mathForm.value.b }} =
+    <input formControlName="answer" autofocus />
+  </form>
+</div>
+<hr>
+
+<div>Form is valid: {{ mathForm.valid }}</div>
+<div>From erros: {{ mathForm.errors  | json }}</div>
+<div *ngIf="scroll >= 107"   class="pyro">
+  <div class="before"></div>
+  <div class="after"></div>
+</div>
